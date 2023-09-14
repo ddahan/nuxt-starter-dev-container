@@ -1,0 +1,38 @@
+{
+    "name": "nuxt starter",
+    "image": "node:18-bullseye",
+    "forwardPorts": [
+        3001
+    ],
+    "portsAttributes": {
+        "3001": {
+            "label": "Nuxt",
+            "onAutoForward": "notify"
+        }
+    },
+    "onCreateCommand": "npm install",
+    "features": {
+        "ghcr.io/ddahan/feature-starter/custom_bashrc:latest": {}
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "esbenp.prettier-vscode",
+                "bradlc.vscode-tailwindcss",
+                "Vue.volar",
+                "antfu.iconify",
+                "yoavbls.pretty-ts-errors",
+                "yzhang.markdown-all-in-one"
+            ],
+            "settings": {
+                //*********************************************************************
+                // general
+                //*********************************************************************
+                "files.insertFinalNewline": true,
+                "files.exclude": {
+                    "**/node_modules": true
+                }
+            }
+        }
+    }
+}
